@@ -1,0 +1,10 @@
+[
+  "number",
+  "string",
+  "boolean",
+  "symbol",
+  "array",
+  "object",
+  "function",
+  "utils"
+]

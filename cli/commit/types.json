@@ -1,0 +1,33 @@
+[
+  {
+    "name": "init",
+    "icon": "🎉",
+    "hint": "初始化项目",
+    "allow": "main"
+  },
+  { "name": "feat", "icon": "✨", "hint": "引入新功能" },
+  { "name": "fix", "icon": "🐛", "hint": "修复 bug" },
+  { "name": "docs", "icon": "📝", "hint": "添加/更新文档" },
+  { "name": "refactor", "icon": "🎨", "hint": "改进代码结构/代码格式" },
+  { "name": "perf", "icon": "👌", "hint": "提高性能/优化" },
+  { "name": "test", "icon": "✅", "hint": "增加测试代码" },
+  { "name": "patch", "icon": "🚑", "hint": "添加重要补丁" },
+  {
+    "name": "publish",
+    "icon": "🚀",
+    "hint": "发布新版本",
+    "allow": []
+  },
+  {
+    "name": "tag",
+    "icon": "📌",
+    "hint": "发布新版本",
+    "allow": []
+  },
+  {
+    "name": "chore",
+    "icon": "🔧",
+    "hint": "修改配置文件",
+    "allow": ["main", "develop"]
+  }
+]
