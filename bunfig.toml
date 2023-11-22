@@ -1,0 +1,12 @@
+preload = ["./cli/utils/consola.ts"]
+
+[define]
+__DEV__ = true
+__TEST__ = false
+
+[install]
+auto = 'fallback'
+
+[test]
+coverage = true
+coverageThreshold = 0.9

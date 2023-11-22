@@ -1,0 +1,57 @@
+{
+  "name": "@dlovely/utils",
+  "version": "1.0.0-rc.0",
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "commit": "bun run cli/commit/index.ts",
+    "release": "release-it",
+    "check": "bun test",
+    "cleanup": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "preinstall": "bun run scripts/preinstall.ts",
+    "postinstall": "simple-git-hooks"
+  },
+  "imports": {
+    "#cli/*": [
+      "./cli/*.ts",
+      "./cli/*.d.ts",
+      "./cli/*/index.ts"
+    ]
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/lodash-es": "^4.17.12",
+    "@types/minimist": "^1.2.5",
+    "bun-types": "latest",
+    "chalk": "^5.3.0",
+    "dayjs": "^1.11.10",
+    "enquirer": "^2.4.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "lodash-es": "^4.17.21",
+    "minimist": "^1.2.8",
+    "ora": "^7.0.1",
+    "prettier": "^3.1.0",
+    "release-it": "^17.0.0",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bun lint-staged && bun run check",
+    "commit-msg": "bun scripts/commit-msg.ts"
+  },
+  "repository": {
+    "url": "https://github.com/dlovely-public/dlovely-utils"
+  }
+}

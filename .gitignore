@@ -1,0 +1,15 @@
+# IDE
+.vscode
+
+# 日志
+*.log
+
+# 构建产物
+dist
+build
+lib
+esm
+cjs
+
+# 依赖
+node_modules
